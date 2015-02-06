@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/umspay_bg" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/umspay_bottom_logo" />
+
+    <include
+        android:id="@+id/re_main_log"
+        layout="@layout/umspay_topbar" />
+
+    <!-- 刷卡银行卡界面 -->
+
+    <LinearLayout
+        android:id="@+id/re_shuaka"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_main_log"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- 已经登录过 -->
+
+        <LinearLayout
+            android:id="@+id/ll_yeslog"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="10dip" >
+
+                <RelativeLayout
+                    android:id="@+id/huitiaozhong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip" >
+
+                    <ImageView
+                        android:id="@+id/ig_input_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:background="@drawable/umspay_icon_card" />
+
+                    <TextView
+                        android:id="@+id/tv_bankname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/ig_input_icon1"
+                        android:textColor="#767676"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <!-- 关联的手机 -->
+
+                <RelativeLayout
+                    android:id="@+id/guanlshouji"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip"
+                    android:layout_below="@id/huitiaozhong" >
+
+                    <ImageView
+                        android:id="@+id/ig_input_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:background="@drawable/umspay_icon_tel" />
+
+                    <TextView
+                        android:id="@+id/tv_cardphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/ig_input_icon2"
+                        android:textColor="#767676"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/guanlshouji"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/umspay_line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/umspay_input_one" >
+
+                <EditText
+                    android:id="@+id/duanxin"
+                    android:layout_width="220dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:background="@null"
+                    android:hint="短信验证码"
+                    android:maxLength="6"
+                    android:numeric="integer"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/umspay_btn_obtain"
+                    android:text="获取"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/re_jiejika"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/umspay_input_one" >
+
+                    <Button
+                        android:id="@+id/et_mima_main"
+                        android:layout_width="250dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="交易密码"
+                        android:maxLength="6"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/umspay_btn_obtain"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/re_xinyongka"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/re_youxiaoqi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="12dip"
+                    android:background="@drawable/umspay_input_one" >
+
+                    <EditText
+                        android:id="@+id/bt_youxiao"
+                        android:layout_width="230dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:background="@null"
+                        android:hint="信用卡正面有效期(MM/YY)"
+                        android:maxLength="5"
+                        android:numeric="integer"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/umspay_btn_obtain"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/re_youxiaoqi"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="12dip"
+                    android:background="@drawable/umspay_input_one" >
+
+                    <Button
+                        android:id="@+id/bt_cvn2"
+                        android:layout_width="230dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="信用卡背面末3位数字"
+                        android:password="true"
+                        android:textSize="16sp" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/umspay_btn_obtain"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/remenber_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/umspay_selector_checkbox"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="添加为常用银行卡"
+                    android:textColor="@color/umspay_text_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/re_next_bt22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="12dip"
+                android:background="@drawable/umspay_red_btn_bg"
+                android:text="确定支付"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

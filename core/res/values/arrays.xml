@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="NormalDrawableList">
+        <item>@drawable/new_recommand</item>
+        <item>@drawable/new_partner</item>
+        <item>@drawable/new_user</item>
+        <item>@drawable/new_setting</item>
+    </array>
+
+    <string-array name="GuideTitles">
+        <item>@string/title1</item>
+        <item>@string/title2</item>
+        <item>@string/title3</item>
+        <item>@string/title4</item>
+        <item>@string/title5</item>
+    </string-array>
+
+    <string-array name="GuideDetails">
+        <item>@string/detail1</item>
+        <item>@string/detail2</item>
+        <item>@string/detail3</item>
+        <item>@string/detail4</item>
+        <item>@string/detail5</item>
+    </string-array>
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.john.groupbuy"
+    android:versionCode="33"
+    android:versionName="3.1.0">
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="18" />
+
+    <!-- android uses-permission define -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.john.groupbuy.GroupBuyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5178a69956240b617100d32b" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="3rd market" />
+
+        <activity
+            android:name="com.john.groupbuy.DisplayQRActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.SelectCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.SearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.CityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.SubmitOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.john.groupbuy.CheckoutOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.ProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.PartnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.BindingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.VerifyCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.TencentLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.CouponsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.ExpressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.map.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.ProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.john.groupbuy.zxing.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.john.groupbuy.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- activitys from umpay -->
+        <activity
+            android:name="com.hxcr.umspay.activity.Initialize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hxcr.umspay.swipe.SwipeCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_activity_mydialog22" />
+        <activity
+            android:name="com.hxcr.umspay.swipe.SelectDriverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_activity_mydialog" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsShuaPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsPayResultYouActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsPayResultWuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.ModifyPhone"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.user.adpater.UmsUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.user.adpater.UmsChangePs"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.banklist.adpater.UmsBankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.order.adpater.UmsOrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsInputPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsRegActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsUserMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.more.adpater.UmsMore"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.SustainBankList"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.UmsForGetPs"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+        <activity
+            android:name="com.hxcr.umspay.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/umspay_Myanimation" />
+    </application>
+
+</manifest>

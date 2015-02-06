@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/umspay_bg" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/umspay_bottom_logo" />
+
+    <include
+        android:id="@+id/re_main_log"
+        layout="@layout/umspay_topbar" />
+
+    <RelativeLayout
+        android:id="@+id/re_ums_info_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_main_log"
+        android:background="#e4e4e4" >
+
+        <ImageView
+            android:id="@+id/ums_iv_touxiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dip"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/umspay_icon_homeuser" />
+
+        <LinearLayout
+            android:id="@+id/ll_ums_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dip"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@+id/ums_iv_touxiang"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户名："
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:text="138888888"
+                    android:textColor="#555555" />
+
+                <ImageButton
+                    android:id="@+id/user_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/umspay_btn_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓    名："
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/xingming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:text="陈荣"
+                    android:textColor="#555555" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/re_ums_caocao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_ums_info_top"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/umspay_main_user_bg_bot" >
+
+        <RelativeLayout
+            android:id="@+id/re_ums_info_bot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="一盒宝："
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btjiechu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/umspay_btn_jiebang"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_ums_info_top"
+        android:orientation="vertical" >
+
+        <!-- 交易查询 -->
+
+        <RelativeLayout
+            android:id="@+id/user_serch_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/umspay_home_item_bg" >
+
+            <ImageView
+                android:id="@+id/icon_serch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_inquiry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/icon_serch"
+                android:gravity="center_vertical"
+                android:text="交易查询"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_arrow" />
+        </RelativeLayout>
+        <!-- 银行卡管理 -->
+
+        <RelativeLayout
+            android:id="@+id/user_manage_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/umspay_home_item_bg" >
+
+            <ImageView
+                android:id="@+id/icon_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/icon_bank"
+                android:gravity="center_vertical"
+                android:text="银行卡管理"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/user_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_arrow" />
+
+            <TextView
+                android:id="@+id/user_card_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/user_arrow"
+                android:background="@drawable/umspay_bank_number"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <!-- 修改密码 -->
+
+        <RelativeLayout
+            android:id="@+id/user_modify_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/umspay_home_item_bg" >
+
+            <ImageView
+                android:id="@+id/icon_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/icon_modify"
+                android:gravity="center_vertical"
+                android:text="修改密码"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_arrow" />
+        </RelativeLayout>
+        <!-- 关于我们 -->
+
+        <RelativeLayout
+            android:id="@+id/user_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/umspay_home_item_bg" >
+
+            <ImageView
+                android:id="@+id/icon_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_ums" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/icon_about"
+                android:gravity="center_vertical"
+                android:text="关于我们"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15sp"
+                android:scaleType="center"
+                android:src="@drawable/umspay_icon_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

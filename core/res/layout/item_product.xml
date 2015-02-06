@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:layout_marginBottom="1dp"
+    >
+    <!--  android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+        
+        <ImageView
+            android:id="@+id/product_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+              
+        	<TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="#000"
+            android:textSize="16sp"
+            android:text="1111"/>
+        	
+        	<ImageView
+            android:id="@+id/new_image_view_flag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/new_icon"
+            android:src="@drawable/icon_new"
+            android:visibility="gone" />
+        </RelativeLayout>
+
+        
+
+        <TextView
+            android:id="@+id/detail_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            android:textColor="#363636"
+            android:textSize="14sp" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/price_text_view"
+            style="@style/listViewPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp" 
+            android:visibility="gone"/>
+
+        <com.john.groupbuy.DiscountView
+            android:id="@+id/discount_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#ababab"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#303030"
+            android:textSize="12sp" 
+            android:visibility="gone"/>
+    </FrameLayout> 
+<!--  
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_coupon_item"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <ImageView
+            android:id="@+id/product_icon"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/new_image_view_flag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/new_icon"
+            android:src="@drawable/icon_new" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/product_icon"
+            android:layout_toLeftOf="@+id/new_image_view_flag"
+            android:layout_toRightOf="@+id/product_icon"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#303030"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/detail_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/price_text_view"
+            android:layout_below="@id/title_text_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/product_icon"
+            android:maxLines="2"
+            android:textColor="#363636"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            style="@style/listViewPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_icon"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/product_icon"
+            android:textSize="18sp" />
+
+        <com.john.groupbuy.DiscountView
+            android:id="@+id/discount_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_text_view"
+            android:layout_toLeftOf="@+id/count_text_view"
+            android:layout_toRightOf="@+id/price_text_view"
+            android:singleLine="true"
+            android:textColor="#ababab" />
+
+        <TextView
+            android:id="@+id/count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/product_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:textColor="#303030"
+            android:textSize="12sp" />
+    </RelativeLayout>
+-->
+    <View
+        android:id="@+id/mask_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_bkg" />
+
+</FrameLayout>

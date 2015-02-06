@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/umspay_bg" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/umspay_bottom_logo" />
+
+    <include
+        android:id="@+id/re_main_log"
+        layout="@layout/umspay_topbar" />
+
+    <LinearLayout
+        android:id="@+id/ll_order"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/re_main_log"
+        android:orientation="vertical" >
+
+        <!-- 商户 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dip" >
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:background="@drawable/umspay_icon_merchants" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dip"
+                android:layout_toRightOf="@id/icon1"
+                android:text="商户名称："
+                android:textColor="#767676"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_merchant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dip"
+                android:layout_toRightOf="@id/tv1"
+                android:text="京东商城"
+                android:textColor="#767676"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!-- 金额 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dip" >
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:background="@drawable/umspay_icon_amount" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dip"
+                android:layout_toRightOf="@id/icon2"
+                android:text="订单金额："
+                android:textColor="#767676"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dip"
+                android:layout_toRightOf="@id/tv2"
+                android:text="0.01"
+                android:textColor="#e48252"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dip"
+                android:layout_toRightOf="@id/tv_money"
+                android:text="元"
+                android:textColor="#767676"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+                <!-- 订单编号 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip" >
+
+                    <ImageView
+                        android:id="@+id/icon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:background="@drawable/umspay_icon_number" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dip"
+                        android:layout_toRightOf="@id/icon3"
+                        android:text="订单编号："
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_orderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dip"
+                        android:layout_toRightOf="@id/tv3"
+                        android:text="74874807478"
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 订单時間 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip" >
+
+                    <ImageView
+                        android:id="@+id/icon4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:background="@drawable/umspay_icon_time" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dip"
+                        android:layout_toRightOf="@id/icon4"
+                        android:text="订单时间："
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ordertime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dip"
+                        android:layout_toRightOf="@id/tv4"
+                        android:text="2013-02-02 15:30"
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 商品信息 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginTop="11dip"
+                        android:background="@drawable/umspay_icon_info" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="8dip"
+                        android:layout_toRightOf="@id/icon5"
+                        android:text="商品描述："
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_orderinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="8dip"
+                        android:layout_marginTop="8dip"
+                        android:layout_toRightOf="@id/tv5"
+                        android:text="N7100 GALAXY Note2"
+                        android:textColor="#767676"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/umspay_line" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dip" >
+
+                    <LinearLayout
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/imagexk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/umspay_icon_payfail" />
+
+                        <TextView
+                            android:id="@+id/tv_jieguo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="支付失败!"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_yuanyin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/result"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dip"
+                        android:textColor="#767676"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/re_reture_merchant"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_yuanyin"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/tv_yuanyintwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="如有疑问,请联系银联商务客服热线95534"
+                            android:textColor="#767676"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ig_btn_icon13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_order"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/umspay_red_btn_bg"
+        android:text="返回商户"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

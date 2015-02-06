@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/email_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal" >
+
+            <AutoCompleteTextView
+                android:id="@+id/account_pe"
+                style="@style/search_auto_style"
+                android:layout_width="fill_parent"
+                android:layout_height="36.0dip"
+                android:background="@drawable/editor_selector"
+                android:drawableLeft="@drawable/login_username_icon_selector"
+                android:drawablePadding="6.0dip"
+                android:hint="@string/user_account_hint"
+                android:paddingLeft="8.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" >
+            </AutoCompleteTextView>
+
+            <ImageButton
+                android:id="@+id/email_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/icon_dd_no_refund"
+                android:padding="5.0dip"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="36.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="12.0dip"
+            android:background="@drawable/editor_selector"
+            android:drawableLeft="@drawable/login_password_icon_selector"
+            android:drawablePadding="6.0dip"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="8.0dip"
+            android:singleLine="true"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:id="@+id/buttons_container"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="12.0dip"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/theme_selector"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="12.0dip"
+            android:orientation="horizontal" >
+            <TextView
+            	android:id="@+id/qqloginBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_gravity="center_horizontal"
+            	android:layout_weight="1.0"
+            	android:text="QQ登录"
+            	android:background="@drawable/qq_login"
+            	android:gravity="center"
+            	android:textSize="@dimen/platfromlogin"/>
+        	<TextView
+            	android:id="@+id/wxloginBtn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10.0dip"
+            	android:layout_weight="1.0"
+            	android:scaleType="centerCrop"
+            	android:text="微信登录"
+            	android:background="@drawable/wx_login" 
+            	android:gravity="center"
+            	android:textSize="@dimen/platfromlogin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="12.0dip"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/registerbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="还没有账号？立即注册>>"
+                android:textColor="@color/blue_bg"
+                android:gravity="center"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <style name="umspay_AppTheme" parent="android:Theme.Light" />
+
+    <style name="umspay_mydialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="umspay_activity_mydialog" parent="@android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/umspay_myactivity_dialog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+    </style>
+
+    <style name="umspay_activity_mydialog22" parent="@android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/umspay_myactivity_dialog2222</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+    </style>
+
+    <style name="umspay_upomp_bypay_MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="umspay_Myanimation" parent="android:Theme.Light">
+        <item name="android:windowAnimationStyle">@style/umspay_AnimationActivity</item>
+    </style>
+
+    <style name="umspay_AnimationActivity">
+        <item name="android:activityOpenEnterAnimation">@anim/umspay_push_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/umspay_push_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/umspay_slide_up_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/umspay_slide_down_out</item>
+    </style>
+
+    <style name="umspay_mystyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/umspay_slide_up_in1</item>
+        <item name="@android:windowExitAnimation">@anim/umspay_slide_down_out1</item>
+    </style>
+</resources>

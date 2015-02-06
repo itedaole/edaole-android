@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:gravity="center"
+                  android:orientation="vertical"
+                  android:layout_weight="1">
+        <ImageView android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:layout_margin="8dp"
+                   android:src="@drawable/ic_launcher"
+                   android:contentDescription="@null"/>
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/app_description"
+                  android:layout_height="wrap_content"
+                  android:text="@string/app_description"
+                  android:gravity="center"
+                  android:textColor="@color/gray1"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+                 android:visibility="gone"
+                 android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_margin="16dp"
+                      android:layout_height="wrap_content">
+            <View style="@style/DividerWider.Padding"/>
+            <Button
+                    android:id="@+id/access_website"
+                    style="@style/SettingItem"
+                    android:text="@string/mu_website"/>
+
+            <View style="@style/DividerNarrow.Padding"
+                    android:visibility="gone"/>
+            <Button
+                    android:id="@+id/connect_mu"
+                    style="@style/SettingItem"
+                    android:text="@string/connect_mu"
+                    android:visibility="gone"/>
+            <View style="@style/DividerNarrow.Padding"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_margin="16dp"
+                  android:textColor="@color/gray1"
+                  android:layout_gravity="bottom|center_horizontal"
+                  android:text="@string/mu_about"/>
+    </FrameLayout>
+</LinearLayout>

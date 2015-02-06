@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/popup_bg" >
+
+    <View
+        android:id="@+id/outside_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_wechat_gray"
+                android:gravity="center"
+                android:id="@+id/weixin_share"
+                android:text="@string/wei_chat" />
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_wxcircle_gray"
+                android:gravity="center"
+                android:id="@+id/weixin_circle_share"
+                android:text="@string/wxcircle" />
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_qzone_on"
+                android:gravity="center"
+                android:clickable="true"
+                android:id="@+id/qzone_share"
+                android:text="@string/qq_zone" />
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_tx_on"
+                android:gravity="center"
+                android:clickable="true"
+                android:id="@+id/tx_weibo_share"
+                android:text="@string/tencent_weibo" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_sina_on"
+                android:gravity="center"
+                android:clickable="true"
+                android:id="@+id/sina_share"
+                android:text="@string/sina_weibo" />
+
+            <TextView
+                android:layout_weight="1"
+                android:drawableTop="@drawable/umeng_socialize_sms"
+                android:gravity="center"
+                android:clickable="true"
+                android:id="@+id/sms_share"
+                android:text="@string/sms" />
+
+            <TextView android:layout_weight="1"
+                android:clickable="true" />
+
+            <TextView android:layout_weight="1"
+                android:clickable="true" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

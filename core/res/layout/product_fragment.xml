@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/action_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/category_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_spinner_selector"
+                android:drawableLeft="@drawable/ic_category_all"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/all"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <Button
+                android:id="@+id/sort_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_spinner_selector"
+                android:drawableLeft="@drawable/ic_order"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/order_default"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <com.john.groupbuy.DragListView
+            android:id="@+id/products_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_list_view"
+            android:cacheColorHint="@color/bg_list_view"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <com.john.groupbuy.LoadingView
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

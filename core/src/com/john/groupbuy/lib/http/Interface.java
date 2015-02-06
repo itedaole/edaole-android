@@ -1,0 +1,32 @@
+package com.john.groupbuy.lib.http;
+public class Interface {
+	public static String DNS_NAME = "http://www.edaole.com";
+    public static String S_WEIBO_URL =  "http://ce.zaowanjia.com";
+    public static String DEFAULT_APP_HOST = DNS_NAME + "/app/api.php?s=";
+    public static String IMAGE_APP_HOST = DNS_NAME + "//static/";
+    public static String S_USER_LOGIN = DEFAULT_APP_HOST + "User/login&";
+    public static String S_PARTNER_LOGIN = DEFAULT_APP_HOST + "Partner/login&";
+    public static String S_PARTNER_LOGOUT = DEFAULT_APP_HOST + "Partner/logout";
+    public static String S_USER_REGISTER = DEFAULT_APP_HOST + "User/register&";
+    public static String S_USER_ISLOGIN = DEFAULT_APP_HOST + "User/isLogin&";
+    public static String S_USER_LOGOUT = DEFAULT_APP_HOST + "User/logout&";
+    public static String S_USERGET_COUPON = DEFAULT_APP_HOST + "User/getCoupon&";
+    public static String S_PRODUCE_List = DEFAULT_APP_HOST + "Tuan/goodsList&page=";
+    public static String S_PRODUCE_List1 = DEFAULT_APP_HOST + "Tuan/goodsList&";
+    public static String S_CITY_List = DEFAULT_APP_HOST + "Tuan/cityList&";
+    public static String S_PRODUCE_DETAILES = DEFAULT_APP_HOST + "/Tuan/detail_mobile&id=";
+    public static String S_REFRESH_PRODUCT = DEFAULT_APP_HOST + "Tuan/goodById&id=";
+    public static String S_PRODUCT_SUBMIT = DEFAULT_APP_HOST + "Tuan/buy&";
+    public static String S_VERIFY_CODE = DEFAULT_APP_HOST + "Partner/verifyCoupon&code=";
+    public static String S_COUPON_CATEGORY = DEFAULT_APP_HOST + "Tuan/typeList";
+    public static String S_PRODUCT_BY_TYPE = DEFAULT_APP_HOST + "Tuan/goodsList&type=%s&page=%d";
+    public static String S_CONSUME_COUPON_FORMAT = DNS_NAME + "/ajax/coupon.php&action=consume&id=%s&secret=%s";
+    public static String S_PARTNER_DETAILS = DEFAULT_APP_HOST + "Partner/detail_mobile&id=";
+    public static String S_MOBILE_VERIFY = DEFAULT_APP_HOST + "User/mobileVerify&";
+    public static String S_IS_LOGIN = DEFAULT_APP_HOST + "User/isLogin";
+    public static String S_EXPRESS_LIST_URL = DEFAULT_APP_HOST + "User/getCoupon&express=1";
+    public static String S_HOME_PAGE = DNS_NAME + "/index.php";
+    public static String S_TENCENT_BINDING = DNS_NAME + "/thirdpart/qzone/index.php";
+    public static String S_PRODUCT_BY_RANGE = DEFAULT_APP_HOST + "Tuan/goodsList&lng=%f&lat=%f&page=%d&orderby=range";
+    public static String S_GETORDERS = DEFAULT_APP_HOST + "User/getOrders";
+}

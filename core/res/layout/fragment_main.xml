@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/layout_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <RadioGroup
+        android:id="@+id/layout_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/new_tabbar_bg"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_recommand"
+            style="@style/TabbarItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/main_recommand" />
+
+        <RadioButton
+            android:id="@+id/main_near_by"
+            style="@style/TabbarItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_near_by" />
+
+        <RadioButton
+            android:id="@+id/main_coupon"
+            style="@style/TabbarItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_coupon" />
+
+        <RadioButton
+            android:id="@+id/main_setting"
+            style="@style/TabbarItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_setting" />
+    </RadioGroup>
+
+</LinearLayout>

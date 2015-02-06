@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:text="工商银行借记卡-尾号00"
+        android:textSize="17sp"
+        android:textColor="@color/umspay_text_color" />
+
+    <ImageView
+        android:id="@+id/img_remove_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/umspay_btn_clear" />
+	<View
+	    
+	    android:layout_width="wrap_content"
+        android:layout_height="37dp"
+	    />
+</RelativeLayout>

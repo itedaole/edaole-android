@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/select_category_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/all_category"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_coupon_item"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="@string/all_category"
+            android:textColor="@color/theme_color" />
+    </LinearLayout>
+
+</ScrollView>
+

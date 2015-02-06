@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <ImageButton
+        android:id="@+id/locationBtn"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/map_button_selector"
+        android:src="@drawable/ic_map_location" />
+
+    <ImageButton
+        android:id="@+id/btn_zoom_in"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:layout_above="@id/locationBtn"
+        android:layout_alignRight="@id/locationBtn"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/map_button_selector"
+        android:src="@drawable/ic_zoom_in" />
+
+    <ImageButton
+        android:id="@+id/btn_zoom_out"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:layout_above="@id/btn_zoom_in"
+        android:layout_alignRight="@id/locationBtn"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/map_button_selector"
+        android:src="@drawable/ic_zoom_out" />
+
+</RelativeLayout>

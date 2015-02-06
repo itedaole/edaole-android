@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/zhong"
+        android:layout_width="fill_parent"
+        android:layout_height="52dip"
+        android:background="#f4f4f4" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_maerchant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="京东商城"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_ordertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2013-02-03 15:15"
+                android:textColor="#9f9f9f"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_maerchant_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ll1"
+            android:layout_marginRight="10dp"
+            android:text="￥:150"
+            android:textColor="#db7c48"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/iv_okorno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv_maerchant_money"
+            android:layout_below="@id/tv_maerchant_money"
+            android:layout_marginTop="2dip"
+            android:text="支付成功"
+            android:textColor="#828dad"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_xiangxi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zhong"
+        android:background="#cccccc"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/umspay_orderinfo_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单编号："
+                android:textColor="#767676"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_ordernumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2013020315150912"
+                android:textColor="#767676"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_below="@+id/ll2"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品信息："
+                android:textColor="#767676"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_orderdes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="华为（HUAWEI） C8813  四核机皇 打游戏妥妥儿的"
+                android:textColor="#767676"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/re_xiangxi"
+        android:background="#d3d3d3" />
+
+</RelativeLayout>

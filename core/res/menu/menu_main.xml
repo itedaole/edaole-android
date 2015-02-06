@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_city"
+        android:title="@string/all"
+        custom:showAsAction="always"/>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/abc_ic_search"
+        android:title="@string/action_search"
+        custom:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/all_city"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16.0dip"
+            android:text="@string/all"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ListView
+                android:id="@+id/city_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+            </ListView>
+
+            <com.john.groupbuy.citylist.SideBar
+                android:id="@+id/sideBar"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#88C6E2FF" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.john.groupbuy.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

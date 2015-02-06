@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="bottom|center_horizontal"
+              android:layout_width="match_parent"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/guide_page_title"
+            style="@style/TextShadow"/>
+    <TextView
+            android:layout_marginTop="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:id="@+id/guide_page_details"
+            style="@style/TextShadow"/>
+
+    <!--56dp-->
+    <Button
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/guide_start_now"
+            android:visibility="invisible"
+            android:text="@string/start"
+            style="@style/Button.Theme.Normal"/>
+</LinearLayout>

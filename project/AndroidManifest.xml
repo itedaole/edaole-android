@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.groupbuy.yidaole"
+          android:versionCode="50"
+          android:versionName="1.3">
+
+    <uses-sdk
+            android:minSdkVersion="10"
+            android:targetSdkVersion="18"/>
+
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <!-- 【可选】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+
+    <!-- android uses-permission define -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+
+    <!--for google map use-->
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
+
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:resizeable="true"
+            android:smallScreens="true"/>
+
+    <application
+            android:name="com.john.groupbuy.GroupBuyApplication"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:debuggable="false">
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        <!--
+        google map key for debug
+        -->
+        <!--<meta-data-->
+                <!--android:name="com.google.android.maps.v2.API_KEY"-->
+                <!--android:value="AIzaSyDhJe14GY5d8G_em3ZUfMozv10VndS4CKE"/>-->
+        <!--google map key for release-->
+        <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyBWyyuVOTVVwe6_cUj4OLt28bXnH7UGOGE"/>
+        <meta-data
+                android:name="USE_GOOGLE_MAP"
+                android:value="true"/>
+        <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="544fbb0afd98c5a66900a12f"/>
+        <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="3rd market"/>
+        <meta-data
+                android:name="ZUITU_MODEL"
+                android:value="true"/>
+        <meta-data
+                android:name="DETAIL_MAX_LINE"
+                android:value="0"/>
+        <meta-data
+                android:name="WEIXIN_APPID"
+                android:value=""/>
+        <meta-data
+                android:name="SUPPORT_UN"
+                android:value=""/>
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+                android:name="XG_V2_ACCESS_ID"
+                android:value=""/>
+
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+                android:name="XG_V2_ACCESS_KEY"
+                android:value=""/>
+
+        <activity
+                android:name="com.john.groupbuy.map.GoogleMapActivity"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name="com.john.groupbuy.WXPaymentActivity"
+                android:screenOrientation="portrait"/>
+
+<!--  -->        <activity
+                android:name="com.groupbuy.yidaole.wxapi.WXEntryActivity"
+                android:exported="true"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.groupbuy.yidaole.wxapi.WXPayEntryActivity"
+                android:exported="true"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.AboutActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.DisplayQRActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.SelectCategoryActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.SearchResultActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.MainActivity"
+                android:screenOrientation="portrait"/>
+<!--         <activity
+                android:name="com.john.groupbuy.LoginActivity"
+                android:screenOrientation="portrait"/> -->
+        <activity
+                android:name="com.john.groupbuy.CityListActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.SubmitOrderActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+                android:name="com.john.groupbuy.CheckoutOrderActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.SearchActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.RegisterActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.OrderDetailActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.ProductActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.WebViewActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.groupbuy.yidaole.CouponActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.PartnerActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.BindingPhoneActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.VerifyCouponActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.TencentLoginActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.CouponsActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.NewCouponsActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.ExpressActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.OrderActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.map.MapActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.ProductListActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.john.groupbuy.zxing.CaptureActivity"
+                android:configChanges="orientation|keyboardHidden"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name="com.john.groupbuy.GuideActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+
+        <activity
+                android:name="com.john.groupbuy.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- umeng begin -->
+        <activity
+                android:name="com.umeng.socialize.view.ShareActivity"
+                android:configChanges="orientation|keyboard"
+                android:launchMode="singleTask"
+                android:noHistory="true"
+                android:theme="@style/Theme.UMDialog"
+                android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:launchMode="singleTask"
+                android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.plus.ImageActivity"/>
+        <activity
+                android:name="com.tencent.connect.common.AssistActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <!-- umeng end -->
+
+        <service
+                android:name="com.baidu.location.f"
+                android:enabled="true"
+                android:process=":remote"/>
+
+        <!-- activitys from umpay -->
+        <activity
+                android:name="com.hxcr.umspay.activity.Initialize"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.hxcr.umspay.swipe.SwipeCardActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_activity_mydialog22"/>
+        <activity
+                android:name="com.hxcr.umspay.swipe.SelectDriverActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_activity_mydialog"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsShuaPayActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsPayResultYouActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsPayResultWuActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.ModifyPhone"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.user.adpater.UmsUser"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.user.adpater.UmsChangePs"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.banklist.adpater.UmsBankListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.order.adpater.UmsOrderListActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsInputPayActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsRegActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"
+                android:windowSoftInputMode="adjustPan"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsUserMode"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.more.adpater.UmsMore"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.SustainBankList"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.UmsForGetPs"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+        <activity
+                android:name="com.hxcr.umspay.activity.WebViewActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/umspay_Myanimation"/>
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+                android:name="com.tencent.android.tpush.XGPushReceiver"
+                android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK"/>
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE"/>
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <!--
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                -->
+            </intent-filter>
+            <!-- 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 -->
+            <!--
+            <intent-filter android:priority="0x7fffffff" >
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+            -->
+        </receiver>
+
+        <receiver android:name="com.john.groupbuy.XGPushReceiver">
+            <intent-filter>
+                <!--&lt;!&ndash; 接收消息透传 &ndash;&gt;-->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE"/>
+                <!--&lt;!&ndash; 监听注册、反注册、设置/删除标签、通知被点击等处理结果 &ndash;&gt;-->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <activity android:name="com.tencent.android.tpush.XGPushActivity">
+            <intent-filter>
+                <action android:name=""/>
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+                android:name="com.tencent.android.tpush.service.XGPushService"
+                android:exported="true"
+                android:persistent="true"
+                android:process=":xg_service_v2"/>
+
+    </application>
+
+</manifest>

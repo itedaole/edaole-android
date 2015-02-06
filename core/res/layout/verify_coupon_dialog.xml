@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_coupon_item"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/product_icon"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/product_icon"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/product_icon"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#303030"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/detail_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/price_text_view"
+            android:layout_below="@id/title_text_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/product_icon"
+            android:maxLines="2"
+            android:textColor="#363636"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            style="@style/listViewPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_icon"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/product_icon"
+            android:textSize="18sp" />
+
+        <com.john.groupbuy.DiscountView
+            android:id="@+id/discount_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_text_view"
+            android:layout_toLeftOf="@+id/count_text_view"
+            android:layout_toRightOf="@+id/price_text_view"
+            android:singleLine="true"
+            android:textColor="#ababab" />
+
+        <TextView
+            android:id="@+id/count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/product_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:textColor="#303030"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/confuse_button"
+            style="@style/Button.Theme.Normal"
+            android:layout_width="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="@string/verify_consume" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/Button.Theme.Normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/re_main_log"
+        layout="@layout/umspay_topbar" />
+
+    <RelativeLayout
+        android:id="@+id/re_haha"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_below="@id/re_main_log" >
+
+        <ImageView
+            android:id="@+id/icon_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/umspay_icon_support_bank"
+            android:scaleType="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/icon_support"
+            android:text="支持银行"
+            android:textColor="#e6805a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:text="借记卡"
+            android:textColor="#959fb8"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="0.5dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="65dip"
+            android:background="#959fb8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75dip"
+            android:text="信用卡"
+            android:textColor="#959fb8"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_haha"
+        android:layout_centerHorizontal="true"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ddffffff"
+         >
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/umspay_text_color" />
+
+        <TextView
+            android:id="@+id/tishi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="3dp"
+            android:text="温馨提示 : 借记卡支付发卡行通常需要持卡人在银行柜面或网银开通银联无卡支付功能"
+            android:textColor="@color/umspay_text_color"
+            android:textSize="12sp"
+             />
+    </RelativeLayout>
+        />
+    <!--
+         <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_haha"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/list_Layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/umspay_item_bg" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/umspay_bj_card_list_logo_default" />
+
+        <ImageView
+            android:id="@+id/invisible_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/umspay_bj_card_list_logo_dy"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_list_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@+id/invisible_view"
+            android:background="@drawable/umspay_card_bg"
+            android:gravity="center"
+            android:text="借记卡"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/jiechu"
+            android:background="@drawable/umspay_line_vertical" />
+
+        <ImageButton
+            android:id="@id/jiechu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/umspay_btn_unbind" />
+
+        <TextView
+            android:id="@+id/tv_list_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/image"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="3dip"
+            android:text="中国银行 *** 8888"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/jiechu"
+            android:layout_alignBottom="@id/jiechu"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/line"
+            android:text="刷卡支付"
+            android:textColor="#828dad"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

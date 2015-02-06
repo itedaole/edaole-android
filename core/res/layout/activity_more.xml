@@ -1,0 +1,132 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true"
+    android:background="#eeeced" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/setting_setting"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View style="@style/DividerWider.Padding" />
+
+        <Button
+            android:id="@+id/cleanCache"
+            style="@style/SettingItem"
+            android:text="@string/clean_cache" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/SettingItem"
+            android:text="@string/login_merchant" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            style="@style/SettingItem"
+            android:text="@string/partner_logout"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/space"
+            style="@style/DividerNarrow.Padding"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/verify_ticket"
+            style="@style/SettingItem"
+            android:text="@string/verify_ticket"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/space2"
+            style="@style/DividerNarrow.Padding"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/contact_us"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <View style="@style/DividerWider.Padding" />
+
+        <Button
+            android:id="@+id/callServerTel"
+            style="@style/SettingItem" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/callJoinUsTel"
+            style="@style/SettingItem" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/about"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <View style="@style/DividerWider.Padding" />
+
+        <Button
+            android:id="@+id/versionNameBtn"
+            style="@style/SettingItem"
+            android:clickable="false" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/homepageBtn"
+            style="@style/SettingItem" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/weiboBtn"
+            style="@style/SettingItem" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+            android:id="@+id/check_update"
+            style="@style/SettingItem"
+            android:text="@string/check_update" />
+
+        <View style="@style/DividerNarrow.Padding" />
+
+        <Button
+                android:id="@+id/mu_support"
+                style="@style/SettingItem"
+                android:text="@string/mu_support" />
+
+        <View style="@style/DividerNarrow.Padding"/>
+
+        <Button
+            android:id="@+id/help"
+            style="@style/SettingItem"
+            android:text="@string/help" />
+
+        <View style="@style/DividerNarrow.Padding" />
+    </LinearLayout>
+
+</ScrollView>

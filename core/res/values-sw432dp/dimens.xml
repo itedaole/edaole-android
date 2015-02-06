@@ -1,0 +1,9 @@
+<resources>
+    <!-- this file for mx3 devices -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="map_popup_width">288dp</dimen>
+    <dimen name="map_popup_height">144dp</dimen>
+    <dimen name="category_item_size">98dp</dimen>
+    <dimen name="category_item_paddding">8dp</dimen>
+</resources>

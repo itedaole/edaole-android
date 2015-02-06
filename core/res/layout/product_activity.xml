@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.john.groupbuy.MyScrollView
+            android:id="@+id/product_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </com.john.groupbuy.MyScrollView>
+
+    <include
+            android:id="@+id/float_action_bar"
+            layout="@layout/item_action_bar"
+            android:visibility="invisible"/>
+
+    <com.john.groupbuy.LoadingView
+            android:id="@+id/product_loading_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+
+</FrameLayout>
